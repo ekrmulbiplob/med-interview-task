@@ -2100,6 +2100,8 @@ __webpack_require__.r(__webpack_exports__);
     },
     // store product into database
     saveProduct: function saveProduct() {
+      var _this2 = this;
+
       var product = {
         title: this.product_name,
         sku: this.product_sku,
@@ -2109,7 +2111,10 @@ __webpack_require__.r(__webpack_exports__);
         product_variant_prices: this.product_variant_prices
       };
       axios.post('/product', product).then(function (response) {
-        console.log(response.data);
+        _this2.product_name = "";
+        _this2.product_sku = "";
+        _this2.description = "";
+        alert("Saved Successfully.");
       })["catch"](function (error) {
         console.log(error);
       });
@@ -63300,8 +63305,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/rifat/Programming/mediusware/interview/interview-question-sr/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /home/rifat/Programming/mediusware/interview/interview-question-sr/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! E:\My project\invertory\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! E:\My project\invertory\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

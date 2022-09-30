@@ -190,7 +190,10 @@ export default {
 
 
             axios.post('/product', product).then(response => {
-                console.log(response.data);
+                this.product_name = "";
+                this.product_sku = "";
+                this.description = "";
+                alert("Saved Successfully.");
             }).catch(error => {
                 console.log(error);
             })
